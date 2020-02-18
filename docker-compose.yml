@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    container_name: web
+    ports:
+      - '3000:3000'
+    build:
+      context: web
+      dockerfile: Dockerfile
+    environment:
+      LE_VAR: ${LE_VAR}
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+      - /app/.next

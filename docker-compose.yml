@@ -7,8 +7,6 @@ services:
     build:
       context: web
       dockerfile: Dockerfile
-    environment:
-      LE_VAR: ${LE_VAR}
     volumes:
       - ./web:/app
       - /app/node_modules

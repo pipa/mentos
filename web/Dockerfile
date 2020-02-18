@@ -7,10 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 COPY yarn.lock ./
 RUN npm config set unsafe-perm true
-
-# Yarn
 RUN yarn
 
-# EXPOSE 3000
-
+# Run the app
 CMD [ "yarn", "dev" ]
